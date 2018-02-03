@@ -8,19 +8,21 @@
 
 import UIKit
 
-class ItemListViewController: UIViewController, CustomGradient {
+class ItemListViewController: GradientViewController {
+    
+    @IBOutlet weak var buildInfo: UILabel!
     
     let dataSource = ItemListDataSource()
     
     lazy var viewModel: ItemListViewModel = {
         return ItemListViewModel(ds: dataSource)
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // UI setup
-        self.setupBackgroundGradient()
+        // Set current build info
+        self.buildInfo.text = self.currentVersionInfo()
         
         // View - View Model binding
         self.dataSource.currentData.addAndNotify(observer: self) { [weak self] in

@@ -12,11 +12,37 @@ import ChameleonFramework
 
 extension UIColor {
     
-    static func bgColorLight() -> UIColor {
+    static func bgFemaleLight() -> UIColor {
         return FlatWatermelon()
     }
     
-    static func bgColorDark() -> UIColor {
+    static func bgFemaleDark() -> UIColor {
         return FlatWatermelonDark()
+    }
+    
+    static func bgMaleLight() -> UIColor {
+        return FlatPowderBlue()
+    }
+    
+    static func bgMaleDark() -> UIColor {
+        return FlatPowderBlueDark()
+    }
+    
+    static func bgColorPalette() -> [UIColor] {
+        return [bgFemaleDark(), bgFemaleLight(), bgMaleLight(), bgMaleDark()]
+    }
+}
+
+extension NSObject {
+    public func currentVersionInfo() -> String {
+        let infoDict = Bundle.main.infoDictionary
+        let appVersion = infoDict?["CFBundleShortVersionString"]
+        let buildNumber = infoDict?["CFBundleVersion"]
+        
+        if let version = appVersion, let build = buildNumber {
+            return "Version \(version) (\(build)) - Paradigm Shift Development, LLC"
+        }
+        
+        return "Version information is unavailable"
     }
 }

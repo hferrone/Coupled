@@ -10,7 +10,6 @@
 		18CEF3C1761088106D174053 /* Pods_Coupled_PrototypeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF74463C81E283CBCD7701B1 /* Pods_Coupled_PrototypeTests.framework */; };
 		36A25AA5BBF3CC0F7C69B758 /* Pods_Coupled_Prototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A965712E8EB6F5662C7DC8 /* Pods_Coupled_Prototype.framework */; };
 		4A25676520238532009A6E35 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A25676420238532009A6E35 /* Extensions.swift */; };
-		4A25676720238558009A6E35 /* CustomGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A25676620238558009A6E35 /* CustomGradient.swift */; };
 		4A283E5C2023838F003CC9CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A283E5B2023838F003CC9CF /* AppDelegate.swift */; };
 		4A283E5E2023838F003CC9CF /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A283E5D2023838F003CC9CF /* ItemListViewController.swift */; };
 		4A283E612023838F003CC9CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A283E5F2023838F003CC9CF /* Main.storyboard */; };
@@ -27,6 +26,8 @@
 		4AEE7ADD2023905C002C2861 /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE7ADC2023905C002C2861 /* ItemListViewModel.swift */; };
 		4AEE7ADF20239119002C2861 /* ItemListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE7ADE20239119002C2861 /* ItemListDataSource.swift */; };
 		4AEE7AE120239A3F002C2861 /* FBDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE7AE020239A3F002C2861 /* FBDataService.swift */; };
+		4AF68E3D2025F69F00E4A47F /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF68E3C2025F69F00E4A47F /* GradientViewController.swift */; };
+		4AF68E3F2025F7D800E4A47F /* Gradientable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF68E3E2025F7D800E4A47F /* Gradientable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,6 @@
 		075693E87EEE2A41E910D3F6 /* Pods-Coupled_PrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coupled_PrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coupled_PrototypeTests/Pods-Coupled_PrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
 		136CBC02C2DBA0766843E92B /* Pods-Coupled_Prototype.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coupled_Prototype.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coupled_Prototype/Pods-Coupled_Prototype.debug.xcconfig"; sourceTree = "<group>"; };
 		4A25676420238532009A6E35 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		4A25676620238558009A6E35 /* CustomGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGradient.swift; sourceTree = "<group>"; };
 		4A283E582023838F003CC9CF /* Coupled_Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coupled_Prototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A283E5B2023838F003CC9CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A283E5D2023838F003CC9CF /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +64,8 @@
 		4AEE7ADC2023905C002C2861 /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
 		4AEE7ADE20239119002C2861 /* ItemListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDataSource.swift; sourceTree = "<group>"; };
 		4AEE7AE020239A3F002C2861 /* FBDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBDataService.swift; sourceTree = "<group>"; };
+		4AF68E3C2025F69F00E4A47F /* GradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
+		4AF68E3E2025F7D800E4A47F /* Gradientable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradientable.swift; sourceTree = "<group>"; };
 		52A965712E8EB6F5662C7DC8 /* Pods_Coupled_Prototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coupled_Prototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE960116844A940F7EAC191F /* Pods-Coupled_PrototypeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coupled_PrototypeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coupled_PrototypeTests/Pods-Coupled_PrototypeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E595F1C7B336701E09C89FF2 /* Pods-Coupled_Prototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coupled_Prototype.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coupled_Prototype/Pods-Coupled_Prototype.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				4A283E5D2023838F003CC9CF /* ItemListViewController.swift */,
+				4AF68E3B2025F68E00E4A47F /* Custom */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,7 +214,7 @@
 		4AEE7ACE20238CAD002C2861 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				4A25676620238558009A6E35 /* CustomGradient.swift */,
+				4AF68E3E2025F7D800E4A47F /* Gradientable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -223,6 +226,14 @@
 				4AEE7ADA20238E59002C2861 /* DataSource.swift */,
 			);
 			path = Generics;
+			sourceTree = "<group>";
+		};
+		4AF68E3B2025F68E00E4A47F /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				4AF68E3C2025F69F00E4A47F /* GradientViewController.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		9CB89D548190A8EBBC358237 /* Pods */ = {
@@ -461,11 +472,12 @@
 				4AEE7AE120239A3F002C2861 /* FBDataService.swift in Sources */,
 				4AEE7ADF20239119002C2861 /* ItemListDataSource.swift in Sources */,
 				4AEE7AD820238E13002C2861 /* BoundValue.swift in Sources */,
-				4A25676720238558009A6E35 /* CustomGradient.swift in Sources */,
 				4A283E5E2023838F003CC9CF /* ItemListViewController.swift in Sources */,
+				4AF68E3F2025F7D800E4A47F /* Gradientable.swift in Sources */,
 				4A25676520238532009A6E35 /* Extensions.swift in Sources */,
 				4A283E5C2023838F003CC9CF /* AppDelegate.swift in Sources */,
 				4AEE7AD420238DA6002C2861 /* Partner.swift in Sources */,
+				4AF68E3D2025F69F00E4A47F /* GradientViewController.swift in Sources */,
 				4AEE7ADD2023905C002C2861 /* ItemListViewModel.swift in Sources */,
 				4AEE7AD220238D11002C2861 /* Enums.swift in Sources */,
 				4AEE7AD020238CFA002C2861 /* SharedItem.swift in Sources */,
