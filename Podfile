@@ -8,8 +8,11 @@ target 'Coupled_Prototype' do
   # Pods for Coupled_Prototype
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Auth'
   pod 'SwiftyJSON'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
   target 'Coupled_PrototypeTests' do
     inherit! :search_paths

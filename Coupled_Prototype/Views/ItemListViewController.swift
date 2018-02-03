@@ -9,9 +9,6 @@
 import UIKit
 
 class ItemListViewController: GradientViewController {
-    
-    @IBOutlet weak var buildInfo: UILabel!
-    
     let dataSource = ItemListDataSource()
     
     lazy var viewModel: ItemListViewModel = {
@@ -20,9 +17,6 @@ class ItemListViewController: GradientViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set current build info
-        self.buildInfo.text = self.currentVersionInfo()
         
         // View - View Model binding
         self.dataSource.currentData.addAndNotify(observer: self) { [weak self] in

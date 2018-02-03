@@ -17,6 +17,10 @@
 		4A283E662023838F003CC9CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A283E642023838F003CC9CF /* LaunchScreen.storyboard */; };
 		4A283E712023838F003CC9CF /* Coupled_PrototypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A283E702023838F003CC9CF /* Coupled_PrototypeTests.swift */; };
 		4A283E7C20238402003CC9CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A283E7B20238402003CC9CF /* GoogleService-Info.plist */; };
+		4A30CDE920261CE600AD64EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A30CDE820261CE600AD64EF /* LoginViewController.swift */; };
+		4A30CDEB20261E1100AD64EF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A30CDEA20261E1100AD64EF /* LoginViewModel.swift */; };
+		4A9A5B062026209700B358AF /* Validateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A5B052026209700B358AF /* Validateable.swift */; };
+		4A9A5B0A20262F9100B358AF /* FBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A5B0920262F9100B358AF /* FBRouter.swift */; };
 		4AEE7AD020238CFA002C2861 /* SharedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE7ACF20238CFA002C2861 /* SharedItem.swift */; };
 		4AEE7AD220238D11002C2861 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE7AD120238D11002C2861 /* Enums.swift */; };
 		4AEE7AD420238DA6002C2861 /* Partner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE7AD320238DA6002C2861 /* Partner.swift */; };
@@ -55,6 +59,10 @@
 		4A283E702023838F003CC9CF /* Coupled_PrototypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coupled_PrototypeTests.swift; sourceTree = "<group>"; };
 		4A283E722023838F003CC9CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A283E7B20238402003CC9CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4A30CDE820261CE600AD64EF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4A30CDEA20261E1100AD64EF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		4A9A5B052026209700B358AF /* Validateable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validateable.swift; sourceTree = "<group>"; };
+		4A9A5B0920262F9100B358AF /* FBRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBRouter.swift; sourceTree = "<group>"; };
 		4AEE7ACF20238CFA002C2861 /* SharedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItem.swift; sourceTree = "<group>"; };
 		4AEE7AD120238D11002C2861 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		4AEE7AD320238DA6002C2861 /* Partner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Partner.swift; sourceTree = "<group>"; };
@@ -125,7 +133,6 @@
 		4A283E5A2023838F003CC9CF /* Coupled_Prototype */ = {
 			isa = PBXGroup;
 			children = (
-				4AEE7AC920238C40002C2861 /* Data Service */,
 				4AEE7ACA20238C56002C2861 /* Models */,
 				4AEE7AC720238C32002C2861 /* Views */,
 				4AEE7AC820238C37002C2861 /* View Models */,
@@ -152,6 +159,7 @@
 		4AEE7AC720238C32002C2861 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4A30CDE820261CE600AD64EF /* LoginViewController.swift */,
 				4A283E5D2023838F003CC9CF /* ItemListViewController.swift */,
 				4AF68E3B2025F68E00E4A47F /* Custom */,
 			);
@@ -161,6 +169,7 @@
 		4AEE7AC820238C37002C2861 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				4A30CDEA20261E1100AD64EF /* LoginViewModel.swift */,
 				4AEE7ADC2023905C002C2861 /* ItemListViewModel.swift */,
 				4AEE7ADE20239119002C2861 /* ItemListDataSource.swift */,
 			);
@@ -171,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				4AEE7AE020239A3F002C2861 /* FBDataService.swift */,
+				4A9A5B0920262F9100B358AF /* FBRouter.swift */,
 			);
 			path = "Data Service";
 			sourceTree = "<group>";
@@ -180,6 +190,7 @@
 			children = (
 				4AEE7AD320238DA6002C2861 /* Partner.swift */,
 				4AEE7ACF20238CFA002C2861 /* SharedItem.swift */,
+				4AEE7AC920238C40002C2861 /* Data Service */,
 				4AEE7AD920238E45002C2861 /* Generics */,
 			);
 			path = Models;
@@ -215,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				4AF68E3E2025F7D800E4A47F /* Gradientable.swift */,
+				4A9A5B052026209700B358AF /* Validateable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -395,7 +407,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Coupled_Prototype/Pods-Coupled_Prototype-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -403,7 +418,10 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -468,6 +486,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A30CDE920261CE600AD64EF /* LoginViewController.swift in Sources */,
+				4A9A5B0A20262F9100B358AF /* FBRouter.swift in Sources */,
 				4AEE7ADB20238E59002C2861 /* DataSource.swift in Sources */,
 				4AEE7AE120239A3F002C2861 /* FBDataService.swift in Sources */,
 				4AEE7ADF20239119002C2861 /* ItemListDataSource.swift in Sources */,
@@ -475,8 +495,10 @@
 				4A283E5E2023838F003CC9CF /* ItemListViewController.swift in Sources */,
 				4AF68E3F2025F7D800E4A47F /* Gradientable.swift in Sources */,
 				4A25676520238532009A6E35 /* Extensions.swift in Sources */,
+				4A30CDEB20261E1100AD64EF /* LoginViewModel.swift in Sources */,
 				4A283E5C2023838F003CC9CF /* AppDelegate.swift in Sources */,
 				4AEE7AD420238DA6002C2861 /* Partner.swift in Sources */,
+				4A9A5B062026209700B358AF /* Validateable.swift in Sources */,
 				4AF68E3D2025F69F00E4A47F /* GradientViewController.swift in Sources */,
 				4AEE7ADD2023905C002C2861 /* ItemListViewModel.swift in Sources */,
 				4AEE7AD220238D11002C2861 /* Enums.swift in Sources */,
