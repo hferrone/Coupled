@@ -19,6 +19,10 @@
 		4A283E7C20238402003CC9CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A283E7B20238402003CC9CF /* GoogleService-Info.plist */; };
 		4A30CDE920261CE600AD64EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A30CDE820261CE600AD64EF /* LoginViewController.swift */; };
 		4A30CDEB20261E1100AD64EF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A30CDEA20261E1100AD64EF /* LoginViewModel.swift */; };
+		4A5A2E1F202779AB00728BDB /* AccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5A2E1E202779AB00728BDB /* AccountInfoViewController.swift */; };
+		4A5A2E212027841A00728BDB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5A2E202027841A00728BDB /* Constants.swift */; };
+		4A5A2E23202785CA00728BDB /* AccountInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5A2E22202785CA00728BDB /* AccountInfoViewModel.swift */; };
+		4A5A2E2520278E4200728BDB /* PartnerLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5A2E2420278E4200728BDB /* PartnerLinkViewController.swift */; };
 		4A9A5B062026209700B358AF /* Validateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A5B052026209700B358AF /* Validateable.swift */; };
 		4A9A5B0A20262F9100B358AF /* FBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A5B0920262F9100B358AF /* FBRouter.swift */; };
 		4ADED0DE202718ED00345A4F /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADED0DD202718ED00345A4F /* RoundedButton.swift */; };
@@ -62,6 +66,10 @@
 		4A283E7B20238402003CC9CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4A30CDE820261CE600AD64EF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4A30CDEA20261E1100AD64EF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		4A5A2E1E202779AB00728BDB /* AccountInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoViewController.swift; sourceTree = "<group>"; };
+		4A5A2E202027841A00728BDB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4A5A2E22202785CA00728BDB /* AccountInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoViewModel.swift; sourceTree = "<group>"; };
+		4A5A2E2420278E4200728BDB /* PartnerLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerLinkViewController.swift; sourceTree = "<group>"; };
 		4A9A5B052026209700B358AF /* Validateable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validateable.swift; sourceTree = "<group>"; };
 		4A9A5B0920262F9100B358AF /* FBRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBRouter.swift; sourceTree = "<group>"; };
 		4ADED0DD202718ED00345A4F /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -162,8 +170,10 @@
 			isa = PBXGroup;
 			children = (
 				4A30CDE820261CE600AD64EF /* LoginViewController.swift */,
+				4A5A2E1E202779AB00728BDB /* AccountInfoViewController.swift */,
 				4A283E5D2023838F003CC9CF /* ItemListViewController.swift */,
 				4AF68E3B2025F68E00E4A47F /* Custom */,
+				4A5A2E2420278E4200728BDB /* PartnerLinkViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				4A30CDEA20261E1100AD64EF /* LoginViewModel.swift */,
+				4A5A2E22202785CA00728BDB /* AccountInfoViewModel.swift */,
 				4AEE7ADC2023905C002C2861 /* ItemListViewModel.swift */,
 				4AEE7ADE20239119002C2861 /* ItemListDataSource.swift */,
 			);
@@ -220,6 +231,7 @@
 			children = (
 				4A25676420238532009A6E35 /* Extensions.swift */,
 				4AEE7AD120238D11002C2861 /* Enums.swift */,
+				4A5A2E202027841A00728BDB /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -409,6 +421,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Coupled_Prototype/Pods-Coupled_Prototype-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -420,6 +433,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
@@ -493,6 +507,8 @@
 				4A9A5B0A20262F9100B358AF /* FBRouter.swift in Sources */,
 				4AEE7ADB20238E59002C2861 /* DataSource.swift in Sources */,
 				4AEE7AE120239A3F002C2861 /* FBDataService.swift in Sources */,
+				4A5A2E23202785CA00728BDB /* AccountInfoViewModel.swift in Sources */,
+				4A5A2E2520278E4200728BDB /* PartnerLinkViewController.swift in Sources */,
 				4AEE7ADF20239119002C2861 /* ItemListDataSource.swift in Sources */,
 				4AEE7AD820238E13002C2861 /* BoundValue.swift in Sources */,
 				4A283E5E2023838F003CC9CF /* ItemListViewController.swift in Sources */,
@@ -504,7 +520,9 @@
 				4A9A5B062026209700B358AF /* Validateable.swift in Sources */,
 				4ADED0DE202718ED00345A4F /* RoundedButton.swift in Sources */,
 				4AF68E3D2025F69F00E4A47F /* GradientViewController.swift in Sources */,
+				4A5A2E212027841A00728BDB /* Constants.swift in Sources */,
 				4AEE7ADD2023905C002C2861 /* ItemListViewModel.swift in Sources */,
+				4A5A2E1F202779AB00728BDB /* AccountInfoViewController.swift in Sources */,
 				4AEE7AD220238D11002C2861 /* Enums.swift in Sources */,
 				4AEE7AD020238CFA002C2861 /* SharedItem.swift in Sources */,
 			);

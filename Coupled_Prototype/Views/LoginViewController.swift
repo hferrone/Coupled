@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class LoginViewController: GradientViewController, UITextFieldDelegate {
+class LoginViewController: GradientViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
@@ -44,25 +44,25 @@ class LoginViewController: GradientViewController, UITextFieldDelegate {
         // Set build info
         self.buildInfoLabel.text = self.currentVersionInfo()
         
-        // Set initial UI states
-        self.loginButton.isEnabled = false
-        self.loginButton.isHidden = true
-        self.registerButton.isEnabled = false
-        self.registerButton.isHidden = true
-        
-        // Textfield delegates
-        emailTextfield.delegate = self
-        passwordTextField.delegate = self
-        
         // UI bindings
         _ = emailTextfield.rx.text.map { $0 ?? "" }.bind(to: loginViewModel.emailText).disposed(by: disposeBag)
         _ = passwordTextField.rx.text.map { $0 ?? "" }.bind(to: loginViewModel.passwordText).disposed(by: disposeBag)
         
-        // Action subscriptions
+        // View Model bindings
+        self.loginViewModel.credentialsAreValid.map { !$0.info.valid }
+        .bind(to: self.loginButton.rx.isHidden).disposed(by: disposeBag)
+        
+        self.loginViewModel.credentialsAreValid.map { !$0.info.valid}
+        .bind(to: self.registerButton.rx.isHidden).disposed(by: disposeBag)
+        
+        self.loginViewModel.credentialsAreValid.map { $0.info.message }
+        .bind(to: self.validationStatus.rx.text).disposed(by: disposeBag)
+        
+        // View Model subscriptions
         self.loginButton.rx.tap.subscribe { _ in
             _ = self.loginViewModel.loginReturningUser().asObservable()
                 .subscribe(onNext: { (user) in
-                    self.enterApplication()
+                    self.performSegue(withIdentifier: Constants.Segues.toItemList, sender: nil)
                 }, onError: { (error) in
                     self.validationStatus.text = error.localizedDescription
                 })
@@ -71,16 +71,11 @@ class LoginViewController: GradientViewController, UITextFieldDelegate {
         self.registerButton.rx.tap.subscribe({ _ in
             _ = self.loginViewModel.createNewUser().asObservable()
                 .subscribe(onNext: { (user) in
-                    self.enterApplication()
+                    self.performSegue(withIdentifier: Constants.Segues.toAccountInfo, sender: nil)
                 }, onError: { (error) in
                     self.validationStatus.text = error.localizedDescription
                 })
         }).disposed(by: disposeBag)
-    }
-    
-    func enterApplication() {
-        self.validationStatus.text = "Awesome!"
-        self.performSegue(withIdentifier: "segueToItemList", sender: nil)
     }
     
     // MARK: Animations
@@ -112,16 +107,5 @@ class LoginViewController: GradientViewController, UITextFieldDelegate {
             self.emailTextfield.isEnabled = true
             self.passwordTextField.isEnabled = true
         }
-    }
-    
-    // MARK: TextField Delegate
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        _ = loginViewModel.credentialsAreValid.subscribe(onNext: { (result) in
-            self.validationStatus.text = result.info.message
-            self.loginButton.isEnabled = result.info.valid
-            self.loginButton.isHidden = !result.info.valid
-            self.registerButton.isEnabled = result.info.valid
-            self.registerButton.isHidden = !result.info.valid
-        }).disposed(by: disposeBag)
     }
 }

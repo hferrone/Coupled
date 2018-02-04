@@ -17,25 +17,120 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Item List View Controller-->
+        <!--Account Info View Controller-->
         <scene sceneID="vfC-si-ZYI">
             <objects>
-                <viewController id="WC7-XX-Rbp" customClass="ItemListViewController" customModule="Coupled_Prototype" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountInfoVC" id="WC7-XX-Rbp" customClass="AccountInfoViewController" customModule="Coupled_Prototype" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wkV-L5-DxC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="JEc-Rb-aMa">
+                                <rect key="frame" x="49" y="84" width="277" height="288"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCOUNT INFO" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy6-ag-x9M">
+                                        <rect key="frame" x="0.0" y="0.0" width="277" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="Mcl-Xn-BNM"/>
+                                            <constraint firstAttribute="width" constant="277" id="Z7Q-3y-aqE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need a few more pieces of information to setup your account. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gfz-rE-JKF">
+                                        <rect key="frame" x="0.0" y="77" width="277" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="277" id="8P2-GO-p2g"/>
+                                            <constraint firstAttribute="height" constant="60" id="G1j-Zm-Xjz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rZm-m7-ItD">
+                                        <rect key="frame" x="0.0" y="161.5" width="277" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Cmm-pk-foF"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5A-ND-u6K">
+                                        <rect key="frame" x="0.0" y="224" width="277" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="P1b-Sn-RKm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9r-81-nRt" customClass="RoundedButton" customModule="Coupled_Prototype" customModuleProvider="target">
+                                <rect key="frame" x="49" y="545" width="277" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="pHz-ic-uN4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3803921569" green="0.42745098040000001" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JEc-Rb-aMa" firstAttribute="top" secondItem="B6z-zk-TTt" secondAttribute="top" constant="64" id="APt-8e-Uns"/>
+                            <constraint firstItem="JEc-Rb-aMa" firstAttribute="centerX" secondItem="wkV-L5-DxC" secondAttribute="centerX" id="Ick-rB-9RU"/>
+                            <constraint firstItem="n9r-81-nRt" firstAttribute="leading" secondItem="JEc-Rb-aMa" secondAttribute="leading" id="IhP-la-c3E"/>
+                            <constraint firstItem="B6z-zk-TTt" firstAttribute="bottom" secondItem="n9r-81-nRt" secondAttribute="bottom" constant="62" id="YhL-Ks-vYh"/>
+                            <constraint firstItem="n9r-81-nRt" firstAttribute="trailing" secondItem="JEc-Rb-aMa" secondAttribute="trailing" id="g1M-Ad-gea"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="B6z-zk-TTt"/>
                     </view>
+                    <connections>
+                        <outlet property="feedbackLabel" destination="n5A-ND-u6K" id="S1n-px-6UC"/>
+                        <outlet property="nameTextfield" destination="rZm-m7-ItD" id="jJa-2w-ng7"/>
+                        <outlet property="updateInfoButton" destination="n9r-81-nRt" id="JNn-aW-QfM"/>
+                        <segue destination="gpy-fn-zRS" kind="show" identifier="segueToPartnerLinking" id="69z-eh-Uw7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Zh-ki-Dea" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="799" y="33"/>
+            <point key="canvasLocation" x="33" y="761"/>
+        </scene>
+        <!--Partner Link View Controller-->
+        <scene sceneID="5y4-bs-5rd">
+            <objects>
+                <viewController storyboardIdentifier="PartnerLinkingVC" id="gpy-fn-zRS" customClass="PartnerLinkViewController" customModule="Coupled_Prototype" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0zG-sI-lEs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.3803921569" green="0.42745098040000001" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="J3L-ZB-EYG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dYr-rE-CLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857" y="761"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ItemListVC" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Coupled_Prototype" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Coupled_Prototype" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,12 +252,28 @@
                         <outlet property="subtitleLabel" destination="1lM-Wl-c7K" id="EDV-Ng-B6j"/>
                         <outlet property="titleLabel" destination="NkM-2Q-HvO" id="6rj-RP-YBI"/>
                         <outlet property="validationStatus" destination="jav-j7-Qvo" id="OEm-h1-7is"/>
-                        <segue destination="WC7-XX-Rbp" kind="show" identifier="segueToItemList" id="cz6-EI-U18"/>
+                        <segue destination="WC7-XX-Rbp" kind="show" identifier="segueToAccountInfo" id="cz6-EI-U18"/>
+                        <segue destination="sqb-LM-niq" kind="show" identifier="segueToItemList" id="sau-Oy-BaH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yrH-QC-89q">
+            <objects>
+                <viewController storyboardIdentifier="ItemListVC" id="sqb-LM-niq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F41-0H-ic1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.3803921569" green="0.42745098040000001" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="cby-N1-Lou"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GLu-VY-Izj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858" y="33"/>
         </scene>
     </scenes>
 </document>

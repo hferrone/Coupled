@@ -41,8 +41,13 @@ struct LoginViewModel {
                 if let fbError = error {
                     observer.onError(fbError)
                 } else {
-                    observer.onNext((user!))
-                    observer.onCompleted()
+                    if let newUser = user {
+                        let data: Dictionary<String, Any> = ["provider": newUser.providerID, "email": newUser.email ?? "", "connectedToPartner": false]
+                        FBDataService.shared.addNewUserToDatabase(uid: newUser.uid, data: data)
+                        
+                        observer.onNext((user!))
+                        observer.onCompleted()
+                    }
                 }
             })
             

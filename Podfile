@@ -13,6 +13,7 @@ target 'Coupled_Prototype' do
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'Action'
 
   target 'Coupled_PrototypeTests' do
     inherit! :search_paths
