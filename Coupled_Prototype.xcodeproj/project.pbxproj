@@ -21,6 +21,7 @@
 		4A30CDEB20261E1100AD64EF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A30CDEA20261E1100AD64EF /* LoginViewModel.swift */; };
 		4A9A5B062026209700B358AF /* Validateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A5B052026209700B358AF /* Validateable.swift */; };
 		4A9A5B0A20262F9100B358AF /* FBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A5B0920262F9100B358AF /* FBRouter.swift */; };
+		4ADED0DE202718ED00345A4F /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADED0DD202718ED00345A4F /* RoundedButton.swift */; };
 		4AEE7AD020238CFA002C2861 /* SharedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE7ACF20238CFA002C2861 /* SharedItem.swift */; };
 		4AEE7AD220238D11002C2861 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE7AD120238D11002C2861 /* Enums.swift */; };
 		4AEE7AD420238DA6002C2861 /* Partner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE7AD320238DA6002C2861 /* Partner.swift */; };
@@ -63,6 +64,7 @@
 		4A30CDEA20261E1100AD64EF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4A9A5B052026209700B358AF /* Validateable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validateable.swift; sourceTree = "<group>"; };
 		4A9A5B0920262F9100B358AF /* FBRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBRouter.swift; sourceTree = "<group>"; };
+		4ADED0DD202718ED00345A4F /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		4AEE7ACF20238CFA002C2861 /* SharedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItem.swift; sourceTree = "<group>"; };
 		4AEE7AD120238D11002C2861 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		4AEE7AD320238DA6002C2861 /* Partner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Partner.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				4AF68E3C2025F69F00E4A47F /* GradientViewController.swift */,
+				4ADED0DD202718ED00345A4F /* RoundedButton.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				4A283E5C2023838F003CC9CF /* AppDelegate.swift in Sources */,
 				4AEE7AD420238DA6002C2861 /* Partner.swift in Sources */,
 				4A9A5B062026209700B358AF /* Validateable.swift in Sources */,
+				4ADED0DE202718ED00345A4F /* RoundedButton.swift in Sources */,
 				4AF68E3D2025F69F00E4A47F /* GradientViewController.swift in Sources */,
 				4AEE7ADD2023905C002C2861 /* ItemListViewModel.swift in Sources */,
 				4AEE7AD220238D11002C2861 /* Enums.swift in Sources */,

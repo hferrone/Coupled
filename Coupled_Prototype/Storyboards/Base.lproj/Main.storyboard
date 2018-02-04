@@ -11,6 +11,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
             <string>AvenirNext-Heavy</string>
             <string>AvenirNext-Medium</string>
         </array>
@@ -87,17 +88,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKD-bm-zsu">
-                                <rect key="frame" x="49" y="557" width="277" height="60"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="tGx-7y-hh6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="20"/>
-                                <state key="normal" title="Sign Up / Login">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jav-j7-Qvo">
                                 <rect key="frame" x="49" y="382" width="277" height="64"/>
                                 <constraints>
@@ -107,20 +97,53 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKD-bm-zsu" customClass="RoundedButton" customModule="Coupled_Prototype" customModuleProvider="target">
+                                <rect key="frame" x="49" y="482" width="277" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="tGx-7y-hh6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZz-Q3-nc6">
+                                <rect key="frame" x="49" y="550" width="277" height="42"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.3803921569" green="0.42745098040000001" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aZO-mt-w3J" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6nP-Hc-Sj3"/>
                             <constraint firstItem="jav-j7-Qvo" firstAttribute="leading" secondItem="cKD-bm-zsu" secondAttribute="leading" id="AfQ-rk-vrX"/>
                             <constraint firstItem="aZO-mt-w3J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="GV1-7q-pAi"/>
-                            <constraint firstItem="aZO-mt-w3J" firstAttribute="top" secondItem="cKD-bm-zsu" secondAttribute="bottom" constant="27" id="J8b-kv-6mf"/>
+                            <constraint firstItem="aZO-mt-w3J" firstAttribute="top" secondItem="cKD-bm-zsu" secondAttribute="bottom" constant="102" id="J8b-kv-6mf"/>
                             <constraint firstItem="aZO-mt-w3J" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="Kbo-fP-7al"/>
+                            <constraint firstItem="HZz-Q3-nc6" firstAttribute="trailing" secondItem="cKD-bm-zsu" secondAttribute="trailing" id="MLJ-fe-uh6"/>
                             <constraint firstItem="AhV-Xf-fkG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MSX-tR-CFQ"/>
                             <constraint firstItem="jav-j7-Qvo" firstAttribute="trailing" secondItem="cKD-bm-zsu" secondAttribute="trailing" id="SRk-sI-a32"/>
+                            <constraint firstItem="HZz-Q3-nc6" firstAttribute="leading" secondItem="cKD-bm-zsu" secondAttribute="leading" id="eer-40-MQu"/>
                             <constraint firstItem="jav-j7-Qvo" firstAttribute="top" secondItem="AhV-Xf-fkG" secondAttribute="bottom" constant="27" id="fip-fI-oqQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cKD-bm-zsu" secondAttribute="trailing" constant="49" id="jzV-vs-YHg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AhV-Xf-fkG" secondAttribute="bottom" constant="312" id="otJ-Cz-HT2"/>
+                            <constraint firstItem="HZz-Q3-nc6" firstAttribute="top" secondItem="cKD-bm-zsu" secondAttribute="bottom" constant="8" symbolic="YES" id="uJX-9n-Gq2"/>
                             <constraint firstItem="AhV-Xf-fkG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="116" id="uTK-5s-LOw"/>
+                            <constraint firstItem="aZO-mt-w3J" firstAttribute="top" secondItem="HZz-Q3-nc6" secondAttribute="bottom" constant="52" id="unC-NL-7tI"/>
                             <constraint firstItem="cKD-bm-zsu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="49" id="y6d-2n-8v3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -130,6 +153,9 @@
                         <outlet property="emailTextfield" destination="qbR-di-tfW" id="ohT-3y-b9l"/>
                         <outlet property="loginButton" destination="cKD-bm-zsu" id="Klh-nQ-M07"/>
                         <outlet property="passwordTextField" destination="Num-mg-cW5" id="GUx-d5-u37"/>
+                        <outlet property="registerButton" destination="HZz-Q3-nc6" id="Het-Ds-gNj"/>
+                        <outlet property="subtitleLabel" destination="1lM-Wl-c7K" id="EDV-Ng-B6j"/>
+                        <outlet property="titleLabel" destination="NkM-2Q-HvO" id="6rj-RP-YBI"/>
                         <outlet property="validationStatus" destination="jav-j7-Qvo" id="OEm-h1-7is"/>
                         <segue destination="WC7-XX-Rbp" kind="show" identifier="segueToItemList" id="cz6-EI-U18"/>
                     </connections>

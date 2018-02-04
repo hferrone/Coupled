@@ -20,11 +20,26 @@ struct LoginViewModel {
         }
     }
     
+    func loginReturningUser() -> Observable<User> {
+        return Observable.create({ (observer) -> Disposable in
+            Auth.auth().signIn(withEmail: self.emailText.value, password: self.passwordText.value, completion: { (user, error) in
+                if let fbError = error {
+                    observer.onError(fbError)
+                } else {
+                    observer.onNext(user!)
+                    observer.onCompleted()
+                }
+            })
+            
+            return Disposables.create()
+        })
+    }
+    
     func createNewUser() -> Observable<User> {
         return Observable.create({ (observer) -> Disposable in
             Auth.auth().createUser(withEmail: self.emailText.value, password: self.passwordText.value, completion: { (user, error) in
-                if let error = error {
-                    observer.onError(error)
+                if let fbError = error {
+                    observer.onError(fbError)
                 } else {
                     observer.onNext((user!))
                     observer.onCompleted()
