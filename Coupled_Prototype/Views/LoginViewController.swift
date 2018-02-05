@@ -34,6 +34,10 @@ class LoginViewController: GradientViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        if FBDataService.shared.currentUserData != nil {
+            self.performSegue(withIdentifier: Constants.Segues.toItemList, sender: nil)
+        }
+        
         // Fire animations
         self.fireAnimations()
     }

@@ -21,7 +21,7 @@ class FBDataService {
     }
     
     func addNewUserToDatabase(uid: String, data: Dictionary<String, Any>) {
-        FBRouter().REF_PARTNERS.child(uid).updateChildValues(data)
+        FBRouter().REF_USERS.child(uid).updateChildValues(data)
     }
     
     func updateUserProfile(displayName: String, completion: @escaping (Error?) -> Void) {
@@ -35,7 +35,7 @@ class FBDataService {
                 }
             })
             
-            FBRouter().REF_PARTNERS.child(user.uid).updateChildValues(["name": displayName])
+            FBRouter().REF_USERS.child(user.uid).updateChildValues(["name": displayName])
             completion(nil)
         }
     }

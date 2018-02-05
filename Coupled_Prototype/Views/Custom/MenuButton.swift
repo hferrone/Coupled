@@ -1,15 +1,16 @@
 //
-//  RoundedButton.swift
+//  MenuButton.swift
 //  Coupled_Prototype
 //
-//  Created by Harrison Ferrone on 2/4/18.
+//  Created by Harrison Ferrone on 2/5/18.
 //  Copyright © 2018 Paradigm Shift Development, LLC. All rights reserved.
 //
 
 import UIKit
 
-class RoundedButton: UIButton, Roundable {
-    
+//@IBDesignable
+class MenuButton: UIButton, Roundable {
+
     @IBInspectable var borderColor: UIColor = UIColor.clear {
         didSet { self.setupButton() }
     }
@@ -18,16 +19,15 @@ class RoundedButton: UIButton, Roundable {
         didSet { self.setupButton() }
     }
     
-    @IBInspectable var cornerRadius: CGFloat = 0.0 {
+    @IBInspectable var cornerRadius: CGFloat = 10.0 {
         didSet { self.setupButton() }
     }
-
+    
     override func awakeFromNib() {
         self.setupButton()
     }
     
     func setupButton() {
-        self.roundView(cornerRadius: cornerRadius, borderColor: borderColor, borderWidth: borderWidth)
+        self.roundView(cornerRadius: cornerRadius, borderColor: borderColor, borderWidth: borderWidth, clipForImage: true)
     }
-
 }

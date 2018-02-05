@@ -13,7 +13,7 @@ import RxCocoa
 class AccountInfoViewController: GradientViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nameTextfield: UITextField!
-    @IBOutlet weak var updateInfoButton: RoundedButton!
+    @IBOutlet weak var updateInfoButton: OnboardingButton!
     @IBOutlet weak var feedbackLabel: UILabel!
     
     lazy var accountInfoViewModel = AccountInfoViewModel()

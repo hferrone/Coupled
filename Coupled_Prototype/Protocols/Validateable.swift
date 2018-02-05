@@ -8,7 +8,10 @@
 
 import Foundation
 
-protocol Validateable {}
+protocol Validateable {
+    func validateEmail() -> FormValidationResult
+    func validatePassword() -> FormValidationResult
+}
 
 extension String: Validateable {
     
