@@ -14,7 +14,7 @@ let BASE_REF = Database.database().reference()
 struct FBRouter {
     private var _REF_BASE = BASE_REF
     private var _REF_USERS = BASE_REF.child("users")
-    private var _REF_PARTNERS = BASE_REF.child("partners")
+    private var _REF_PARTNERS = BASE_REF.child("partnered_users")
     private var _REF_HISTORY = BASE_REF.child("monthly_history")
     
     var REF_BASE: DatabaseReference {

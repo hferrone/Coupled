@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class AccountInfoViewController: GradientViewController, UITextFieldDelegate {
+class AccountInfoViewController: GradientViewController {
 
     @IBOutlet weak var nameTextfield: UITextField!
     @IBOutlet weak var updateInfoButton: OnboardingButton!
@@ -21,9 +21,6 @@ class AccountInfoViewController: GradientViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Textfield delegates
-        self.nameTextfield.delegate = self
         
         // UI bindings
         _ = self.nameTextfield.rx.text.map { $0 ?? "" }

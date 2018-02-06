@@ -9,7 +9,6 @@
 import Foundation
 import RxSwift
 import RxCocoa
-import Action
 
 struct AccountInfoViewModel {
     var displayName = Variable<String>("")

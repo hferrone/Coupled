@@ -11,7 +11,6 @@ import UIKit
 import ChameleonFramework
 
 extension UIColor {
-    
     static func bgFemaleLight() -> UIColor {
         return FlatWatermelon()
     }

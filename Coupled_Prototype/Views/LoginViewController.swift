@@ -34,7 +34,7 @@ class LoginViewController: GradientViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if FBDataService.shared.currentUserData != nil {
+        if FBDataService.shared.currentUser != nil {
             self.performSegue(withIdentifier: Constants.Segues.toItemList, sender: nil)
         }
         
@@ -56,7 +56,7 @@ class LoginViewController: GradientViewController {
         self.loginViewModel.credentialsAreValid.map { !$0.info.valid }
         .bind(to: self.loginButton.rx.isHidden).disposed(by: disposeBag)
         
-        self.loginViewModel.credentialsAreValid.map { !$0.info.valid}
+        self.loginViewModel.credentialsAreValid.map { !$0.info.valid }
         .bind(to: self.registerButton.rx.isHidden).disposed(by: disposeBag)
         
         self.loginViewModel.credentialsAreValid.map { $0.info.message }

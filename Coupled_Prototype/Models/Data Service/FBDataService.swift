@@ -12,7 +12,7 @@ import Firebase
 class FBDataService {
     static let shared = FBDataService()
     
-    var currentUserData: User? {
+    var currentUser: User? {
         if let user = Auth.auth().currentUser {
             return user
         } else {
@@ -25,7 +25,7 @@ class FBDataService {
     }
     
     func updateUserProfile(displayName: String, completion: @escaping (Error?) -> Void) {
-        if let user = currentUserData {
+        if let user = currentUser {
             let changeRequest = user.createProfileChangeRequest()
             
             changeRequest.displayName = displayName
@@ -37,6 +37,13 @@ class FBDataService {
             
             FBRouter().REF_USERS.child(user.uid).updateChildValues(["name": displayName])
             completion(nil)
+        }
+    }
+    
+    func linkPartners(senderUID: String) {
+        if let user = currentUser {
+            FBRouter().REF_USERS.child(senderUID).updateChildValues(["partnerUID": user.uid, "connectedToPartner": true])
+            FBRouter().REF_USERS.child(user.uid).updateChildValues(["partnerUID": senderUID, "connectedToPartner": true])
         }
     }
 }

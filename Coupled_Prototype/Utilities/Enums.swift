@@ -9,7 +9,7 @@
 import Foundation
 
 public enum ItemCategory {
-    case Food, Service, Housing, Misc
+    case Food, Service, Housing, Travel, Pets, Misc
 }
 
 public enum FormValidationResult {

@@ -22,4 +22,9 @@ struct Constants {
         static let toItemList = "segueToItemList"
         static let toPartnerLink = "segueToPartnerLinking"
     }
+    
+    struct DynamicLinks {
+        static let domain = "anv97.app.goo.gl"
+        static let appCode = "anv97"
+    }
 }

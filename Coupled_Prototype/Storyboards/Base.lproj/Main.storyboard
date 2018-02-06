@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,6 +15,7 @@
             <string>AvenirNext-DemiBold</string>
             <string>AvenirNext-Heavy</string>
             <string>AvenirNext-Medium</string>
+            <string>AvenirNext-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -119,9 +121,39 @@
                     <view key="view" contentMode="scaleToFill" id="0zG-sI-lEs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SZ-4n-BIO" customClass="OnboardingButton" customModule="Coupled_Prototype" customModuleProvider="target">
+                                <rect key="frame" x="49" y="543" width="277" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Link">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.3803921569" green="0.42745098040000001" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="J3L-ZB-EYG" firstAttribute="bottom" secondItem="8SZ-4n-BIO" secondAttribute="bottom" constant="64" id="FGA-pN-BIY"/>
+                            <constraint firstItem="8SZ-4n-BIO" firstAttribute="top" secondItem="J3L-ZB-EYG" secondAttribute="top" constant="523" id="GkY-gr-9tg"/>
+                            <constraint firstItem="8SZ-4n-BIO" firstAttribute="centerX" secondItem="0zG-sI-lEs" secondAttribute="centerX" id="Zjc-q0-l3F"/>
+                            <constraint firstItem="8SZ-4n-BIO" firstAttribute="leading" secondItem="J3L-ZB-EYG" secondAttribute="leading" constant="49" id="nfM-v6-87S"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="J3L-ZB-EYG"/>
                     </view>
+                    <connections>
+                        <outlet property="linkPartnerButton" destination="8SZ-4n-BIO" id="Djq-Lf-OeR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYr-rE-CLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -331,15 +363,30 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8J-Bh-rwO">
+                                <rect key="frame" x="16" y="611" width="83" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutOnButtonPressed:" destination="sqb-LM-niq" eventType="touchUpInside" id="AFk-JZ-GnS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.3803921569" green="0.42745098040000001" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cby-N1-Lou" firstAttribute="trailing" secondItem="O8J-Bh-rwO" secondAttribute="trailing" constant="276" id="LMr-Tj-4ws"/>
+                            <constraint firstItem="O8J-Bh-rwO" firstAttribute="leading" secondItem="F41-0H-ic1" secondAttribute="leadingMargin" id="uYS-Tb-T97"/>
+                            <constraint firstAttribute="bottom" secondItem="O8J-Bh-rwO" secondAttribute="bottom" constant="20" symbolic="YES" id="ujA-Sy-atg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cby-N1-Lou"/>
                     </view>
                     <navigationItem key="navigationItem" id="zfm-SF-PQt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLu-VY-Izj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1628" y="34"/>
+            <point key="canvasLocation" x="1628" y="33.733133433283363"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ol2-vd-91q">
